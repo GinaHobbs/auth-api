@@ -12,9 +12,7 @@ const authRoutes = require('./auth/routes/routes.js');
 
 //API server routes
 const logger = require('../../auth-server/src/api-middleware/logger.js');
-
 const v1Routes = require('../../auth-server/src/auth/routes/v1.js');
-
 
 // Prepare the express app
 const app = express();
@@ -29,7 +27,9 @@ app.use(logger);
 
 // Routes
 app.use(authRoutes);
-app.use('/api/v1', v1Routes);
+// app.use('/api/v1', v1Routes);
+app.use(v1Routes);
+
 
 // Catchalls
 app.use(notFound);
