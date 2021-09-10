@@ -11,8 +11,8 @@ const notFound = require('./error-handlers/404.js');
 const authRoutes = require('./auth/routes/routes.js');
 
 //API server routes
-const logger = require('../../auth-server/src/api-middleware/logger.js');
-const v1Routes = require('../../auth-server/src/auth/routes/v1.js');
+const logger = require('../src/api-middleware/logger.js');
+const v1Routes = require('../src/auth/routes/v1.js');
 
 // Prepare the express app
 const app = express();
